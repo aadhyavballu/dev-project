@@ -4,6 +4,10 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 from pathlib import Path
+from pathlib import Path
+
+CHART_DIR = Path("outputs") / "charts"
+CHART_DIR.mkdir(parents=True, exist_ok=True)
 
 # ==========================================
 # 1. INITIALIZATION
