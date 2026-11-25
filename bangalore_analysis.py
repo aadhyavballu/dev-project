@@ -1,4 +1,4 @@
-```python
+
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -635,4 +635,3 @@ print("\nAll charts saved inside outputs/charts/")
 print("All analysis tables saved inside outputs/")
 
 print("\nTHANK YOU!")
-```
