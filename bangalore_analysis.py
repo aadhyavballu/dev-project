@@ -415,6 +415,41 @@ plt.ylabel("Travel Time")
 plt.tight_layout()
 plt.savefig(CHARTS / "speed_vs_travel_time.png")
 plt.close()
+#distance vs time
+plt.figure(figsize=(8, 5))
+sns.scatterplot(data=df, x="distance", y="travel_time")
+plt.title("Distance vs Travel Time")
+plt.xlabel("Distance")
+plt.ylabel("Travel Time")
+plt.savefig(CHART_DIR / "15_distance_vs_travel_time.png")
+plt.close()
+#average speed by day
+plt.figure(figsize=(8, 5))
+sns.barplot(data=df, x="day_of_week", y="speed")
+plt.title("Average Speed by Day")
+plt.xticks(rotation=30)
+plt.savefig(CHART_DIR / "16_speed_by_day.png")
+plt.close()
+vehicle cont by hour 
+plt.figure(figsize=(8, 5))
+sns.lineplot(data=df, x="hour", y="vehicles", estimator="mean")
+plt.title("Average Vehicle Count by Hour")
+plt.savefig(CHART_DIR / "17_vehicles_by_hour.png")
+plt.close()
+#travel time
+plt.figure(figsize=(8, 5))
+sns.barplot(data=df, x="weather", y="travel_time")
+plt.title("Average Travel Time by Weather")
+plt.xticks(rotation=30)
+plt.savefig(CHART_DIR / "18_travel_time_by_weather.png")
+plt.close()
+#distance distibution
+plt.figure(figsize=(8, 5))
+sns.histplot(df["distance"], bins=30, kde=True)
+plt.title("Distribution of Route Distance")
+plt.xlabel("Distance")
+plt.savefig(CHART_DIR / "19_distance_distribution.png")
+plt.close()
 
 
 # ==========================================
